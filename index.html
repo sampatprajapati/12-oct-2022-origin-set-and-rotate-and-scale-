@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS transform</title>
+        <style>
+            /*
+            CSS Transform and rotate and origin set*/
+            /*
+            syntax
+            parent > child{
+
+            }*/
+            .p {
+                width: 400px;
+                height: 400px;
+                background: purple;
+                border: dashed black;
+                position: relative;
+                margin: 100px auto;
+            }
+            .p > .c {
+                /* state-1*/
+                width: 200px;
+                height: 200px;
+                background: red;
+                border: 5px solid black;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                transition: all 1s linear;
+                transform: rotate(0deg);
+                transform-origin: right bottom;
+            }
+
+            .p:hover > .c {
+                /* state-2 */
+                background: green;
+                transform: rotate(360deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="p">
+            <div class="c"></div>
+        </div>
+    </body>
+</html>
